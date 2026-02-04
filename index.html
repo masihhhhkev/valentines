@@ -13,11 +13,14 @@
 <body>
     <div class="container">
         <h1>Will you be my Valentine? ❤️</h1>
-        <button id="yesBtn" onclick="alert('Yay! See you on the 14th!')">Yes!</button>
-        <button id="noBtn" onmouseover="moveButton()">No</button>
+        <button id="yesBtn" onclick="celebrate()">Yes! :) </button>
+        <button id="noBtn" onmouseover="moveButton()">No :( </button>
     </div>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
     <script>
+        // This function makes the 'No' button jump away
         function moveButton() {
             const btn = document.getElementById('noBtn');
             const x = Math.random() * (window.innerWidth - btn.offsetWidth);
@@ -27,5 +30,23 @@
             btn.style.top = y + 'px';
         }
     </script>
+
+    <script>
+        //This function runs the yes button
+        function celebrate(){
+            confetti({
+                particleCount: 150, 
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+        //then wait 1 second then go to the next page
+            setTimeout(function(){
+                window.location.href = "yes.html";
+            }, 1000);
+        }
+    </script>
+
+    
 </body>
 </html>
