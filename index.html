@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be My Valentine?</title>
     <style>
         body { text-align: center; font-family: 'Arial', sans-serif; background-color: #ffe6e6; }
@@ -8,6 +10,21 @@
         h1 { color: #ff4d4d; }
         button { padding: 15px 30px; font-size: 1.2rem; cursor: pointer; border-radius: 10px; border: none; }
         #yesBtn { background-color: #ff4d4d; color: white; }
+        /* MOBILE SPECIFIC STYLES */
+    /* This only triggers if the screen width is less than 600px */
+    @media (max-width: 600px) {
+        button {
+            width: 80%; /* Makes buttons take up most of the screen width */
+            padding: 20px; /* Makes them taller/thicker for thumbs */
+            font-size: 1.5rem; /* Makes the text easier to read */
+            display: block; /* Stacks the buttons on top of each other */
+            margin: 15px auto; /* Centers them with more space between */
+        }
+
+        h1 {
+            font-size: 1.8rem; /* Shrinks text slightly so it doesn't wrap weirdly */
+        }
+    }
     </style>
 </head>
 <body>
