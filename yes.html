@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Knew You'd Say Yes!</title>
+    
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffcccc; /* A slightly deeper pink/red */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Prevents scrollbars if things bounce */
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 3rem;
+            text-shadow: 2px 2px white;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 80%;
+        }
+
+        /* Styling for the GIF or Image */
+        .celebration-gif {
+            width: 300px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Yay! I'm the luckiest! ❤️</h1>
+        
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp1Mnd4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l41lH4ADRtAYnGsLe/giphy.gif" 
+             alt="Celebrating" 
+             class="celebration-gif">
+
+        <p>I can't wait to spend the day with you.</p>
+        <p><strong>See you on February 14th!</strong></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        // Fires confetti immediately when the page loads
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    </script>
+
+</body>
+</html>
